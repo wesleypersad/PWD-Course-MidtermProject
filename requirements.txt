@@ -1,0 +1,41 @@
+# This section summarises all the packages I had to import in one place 
+
+from nltk.corpus import stopwords
+import string
+from nltk.tokenize import word_tokenize
+
+# Import the required libaries for analysing this dictionary
+import pandas as pd
+import nltk
+from nltk.corpus import webtext
+from nltk.probability import FreqDist
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+
+nltk.download('punkt')
+nltk.download('wordnet')
+
+# Sentiment Analysis imports
+from nltk.classify import NaiveBayesClassifier
+from nltk.corpus import subjectivity
+from nltk.sentiment import SentimentAnalyzer
+from nltk.sentiment.util import *
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
+
+# Let us import beautiful soup that will get the HTML from this webpage
+from bs4 import BeautifulSoup
+import requests
+
+# Import library to create pandas dataframe and make big enough to hold lyrics
+import pandas as pd
+pd.set_option('max_colwidth', 5000)
+
+# Import time library to delay excessive demand when web scraping
+import time
+
+# Import the custome functions written for this midterm project
+from midterm import *
+
+# Initialise the stop words with punctuation and weird words 
+stop = stopwords.words('english') + list(string.punctuation) + ['chorus',"n't", "'s", "'re", 'n', "'ll", 'ca', "'m"]
+#print(stop)
